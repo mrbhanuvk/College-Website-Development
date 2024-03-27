@@ -1,2 +1,2 @@
-# College-Website-Development
-college website development
+# CollegeWebsite
+College Website Project-2024 

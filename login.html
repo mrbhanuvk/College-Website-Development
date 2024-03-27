@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><button type="button" class="prev-btn">Previous</button></a>
+        <div class="form-box">
+            <h2 id="titleH2">KLS GIT BELAGAVI</h2>
+            <h1 id="title">Sign Up</h1>
+            <form action="/action.php" name="myForm" onsubmit="return validateForm()" method="post" >
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="fname" id="fname" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" name="lname" id="lname" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" name="kname" id="kname" placeholder="Password">
+                    </div>
+                    <p>Forgot password ? <a href="#">Click Here</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="signupBtn">Sign up</button>
+                    <button type="button" class="disable" id="signinBtn">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<!-- ------------------JavaScript---------------------- -->
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value ;
+            let y = document.forms["myForm"]["lname"].value ;
+            let z = document.forms["myForm"]["kname"].value ;
+            if (x=="") {
+                alert("Name Must be filled out");
+                return false ;
+            } else if (y=="") {
+                alert("Email Must be filled out");
+                return false ;
+            } else if (z=="") {
+                alert("Password Must be filled out");
+                return false ;
+            } else {
+                alert("Successfully Sign in");
+                return true ; 
+            }
+        }
+
+
+        let signupBtn = document.getElementById("signupBtn");
+        let signinBtn = document.getElementById("signinBtn");
+        let nameField = document.getElementById("nameField");
+        let title = document.getElementById("title");
+
+        signinBtn.onclick = function(){
+            nameField.style.maxHeight = "0";
+            title.innerHTML = "Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+        }
+
+        signupBtn.onclick = function(){
+            nameField.style.maxHeight = "60px";
+            title.innerHTML = "Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+        }
+    </script>
+</body>
+</html>

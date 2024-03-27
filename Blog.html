@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="git_logo.png" alt="Logo"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="About.html">ABOUT</a></li>
+                    <li><a href="Course.html">COURSE</a></li>
+                    <li><a href="Blog.html">BLOG</a></li>
+                    <li><a href="Contact.html">CONTACT US</a></li>
+                    <li><a href="login.html">LOGIN</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Certification & Online Programs for 2024</h1>
+    </section>
+
+<!-- Blog page content -->
+<section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            <img src="certificate.jpg" alt="certificate">
+            <h2>Our Certification & Online Programs for 2024</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias atque accusantium consequuntur ex eaque, necessitatibus iure. Enim mollitia, dolor beatae praesentium fugit consequatur rerum adipisci doloribus perferendis incidunt facilis suscipit.
+            Dolorum assumenda, nam libero voluptatum dolor nulla quidem ea sunt quisquam ipsum praesentium aut necessitatibus repellat provident eaque autem velit dolores sint! Tempore asperiores earum dolorem facilis, quos cupiditate aperiam!</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia reiciendis exercitationem perferendis voluptates! Beatae sed illo neque doloremque ea, exercitationem, odio eos deleniti ab, quaerat delectus? Aspernatur voluptatibus eveniet facilis?
+            Debitis cumque nihil non? Est alias corrupti perspiciatis unde recusandae consequuntur. Iusto, deleniti. Dolorum at tempore aperiam incidunt nam nesciunt provident facilis vitae quod architecto, temporibus excepturi, perferendis cumque error?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia reiciendis exercitationem perferendis voluptates! Beatae sed illo neque doloremque ea, exercitationem, odio eos deleniti ab, quaerat delectus? Aspernatur voluptatibus eveniet facilis?
+            Debitis cumque nihil non? Est alias corrupti perspiciatis unde recusandae consequuntur. Iusto, deleniti. Dolorum at tempore aperiam incidunt nam nesciunt provident facilis vitae quod architecto, temporibus excepturi, perferendis cumque error?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia reiciendis exercitationem perferendis voluptates! Beatae sed illo neque doloremque ea, exercitationem, odio eos deleniti ab, quaerat delectus? Aspernatur voluptatibus eveniet facilis?
+            Debitis cumque nihil non? Est alias corrupti perspiciatis unde recusandae consequuntur. Iusto, deleniti. Dolorum at tempore aperiam incidunt nam nesciunt provident facilis vitae quod architecto, temporibus excepturi, perferendis cumque error?</p>
+
+            <div class="comment-box">
+                <h3> Leave a Comment</h3>
+
+                <form action="#" class="comment-form">
+                    <input type="text" name="" id="" placeholder="Enter Name">
+                    <input type="text" name="" id="" placeholder="Enter Email">
+                    <textarea name="" id="" cols="" rows="5" placeholder="Your Comment"></textarea>
+                    <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                </form>
+            </div>
+        </div>
+        <div class="blog-right">
+            <h3>Post Categories</h3>
+            <div>
+                <span>Computer Science</span>
+                <span>180</span>
+            </div>
+            <div>
+                <span>Electronics & Communication</span>
+                <span>180</span>
+            </div>
+            <div>
+                <span>Information Science</span>
+                <span>60</span>
+            </div>
+            <div>
+                <span>EEE</span>
+                <span>60</span>
+            </div>
+            <div>
+                <span>Business Analytics</span>
+                <span>30</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer-->
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit . Lorem ipsum dolor sit amet consectetur adipisicing elit .adipisci voluptatibus <br> Tempore distinctio est rem consequatur ipsa, nemo fugit dolore id erro provident saepe .</p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa-solid fa-heart"></i> by GIT Students (BCP) </p>
+    </section>
+
+<!-------------------------- Javascript---------------------->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
+
